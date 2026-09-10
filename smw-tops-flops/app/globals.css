@@ -320,9 +320,9 @@ tr:nth-child(even) td {
   dis*lay: flex;
   align-items: center;
 * justify-content: center;
-  paddin*: 20px;
-  background: rgba(32, 24,*26, 0.62);
-  backdrop-filter: blur*5px);
+  padding: ;: 20px;
+  background: rgba(32, 24, 26, 0.62);
+  backdrop-filter: blur(5px);
 }
 
 .popup {
