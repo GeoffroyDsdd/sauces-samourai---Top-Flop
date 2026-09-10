@@ -1,0 +1,1 @@
+.podiumRow,.resultRow{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--line);border-radius:12px;margin:6px 0}.podiumTop{background:linear-gradient(90deg,#fff0f7,#fff);border:1px solid #ffc9e2}.podiumFlop{background:linear-gradient(90deg,#fff5e9,#fff);border:1px solid #ffd4a3}.rank{font-size:1.55rem;min-width:38px;text-align:center}
