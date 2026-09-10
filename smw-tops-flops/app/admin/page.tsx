@@ -1,6 +1,6 @@
 "use client";
 import{useEffect,useState}from"react";
-export default function Page(){const[ok,setOk]=useState(false),[u,setU]=useState("Sauces SamouraiCAPI"),[p,setP]=useState(""),[data,setData]=useState<any>(null),[name,setName]=useState(""),[detail,setDetail]=useState<any>(null);
+export default function Page(){const[ok,setOk]=useState(false),[u,setU]=useState("samourai"),[p,setP]=useState(""),[data,setData]=useState<any>(null),[name,setName]=useState(""),[detail,setDetail]=useState<any>(null);
  async function load(){const r=await fetch("/api/admin/data");if(r.ok){setOk(true);setData(await r.json())}}
  useEffect(()=>{load()},[]);
  async function login(e:any){e.preventDefault();const r=await fetch("/api/admin/login",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({username:u,password:p})});if(r.ok)load();else alert("Connexion refusée")}
