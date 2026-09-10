@@ -312,3 +312,65 @@ tr:nth-child(even) td {
 @media (max-width: 750px) {
   .shell {
     width: min(
+        /* Popup de confirmation du vote */
+
+.popupBack {
+  position: fixed;*  inset: 0;
+  z-index: 9999;
+  dis*lay: flex;
+  align-items: center;
+* justify-content: center;
+  paddin*: 20px;
+  background: rgba(32, 24,*26, 0.62);
+  backdrop-filter: blur*5px);
+}
+
+.popup {
+  width: min(440*x, 100%);
+  padding: 34px;
+  text-*lign: center;
+  background: #fffff*;
+  border: 3px solid var(--samour*i-red);
+  border-radius: 24px;
+  b*x-shadow: 0 24px 70px rgba(32, 24,*26, 0.35);
+  animation: popupArriv*l 0.25s ease-out;
+}
+
+.popup .tick *
+  display: flex;
+  align-items: c*nter;
+  justify-content: center;
+ *width: 72px;
+  height: 72px;
+  mar*in: 0 auto 18px;
+  font-size: 42px*
+  background: rgba(242, 140, 40, *.14);
+  border-radius: 50%;
+}
+
+.po*up h2 {
+  margin: 0 0 12px;
+* color: var(--samourai-dark-red);
+*
+
+.popup p {
+  margin: 0 0 24px;
+ *color: var(--samourai-black);
+  li*e-height:*1.5;
+}
+
+.popup button {
+* min-width: 150px;
+}
+
+@key*rames popupArrival {
+  from {
+    *pacity: 0;
+    transform: translat*Y(18px) scale(0.96);
+  }
+
+  to*{
+    opacity: 1;
+    transform: t*anslateY(0) scale(1);
+ *}
+*
