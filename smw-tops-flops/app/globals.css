@@ -717,4 +717,96 @@ tr:nth-child(even) td {
   .resultsThreeColumns {
     grid-template-columns: 1fr;
   }
+  /* Affichage final des résultats en trois colonnes */
+
+.resultsThreeColumns {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  gap: 28px !important;
+  width: 100% !important;
+}
+
+.resultsThreeColumns .resultColumn {
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 28px !important;
+}
+
+.resultsThreeColumns .resultColumn h3 {
+  margin: 0 0 26px !important;
+  font-size: 1.75rem !important;
+  text-align: center !important;
+}
+
+.resultsThreeColumns .rankingRow {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  margin-bottom: 16px !important;
+  padding: 18px !important;
+  border-radius: 16px !important;
+}
+
+.resultsThreeColumns .rank {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 48px !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: 0 !important;
+  font-size: 1.65rem !important;
+  line-height: 1 !important;
+}
+
+.resultsThreeColumns .rankingContent {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  min-width: 0 !important;
+  gap: 10px !important;
+}
+
+.resultsThreeColumns .rankingContent strong {
+  display: block !important;
+  margin: 0 !important;
+  color: var(--samourai-dark-red) !important;
+  font-size: 1.3rem !important;
+  line-height: 1.25 !important;
+}
+
+.resultsThreeColumns .rankingContent small {
+  display: block !important;
+  margin-top: 6px !important;
+  color: rgba(32, 24, 26, 0.78) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+}
+
+.resultsThreeColumns .rankingContent small b {
+  display: block !important;
+  margin-bottom: 8px !important;
+  color: var(--samourai-black) !important;
+  font-size: 1.2rem !important;
+}
+
+.resultColumnTop {
+  border-top: 7px solid var(--samourai-gold) !important;
+}
+
+.resultColumnFlop {
+  border-top: 7px solid var(--samourai-red) !important;
+}
+
+.resultColumnGhost {
+  border-top: 7px solid #787878 !important;
+}
+
+@media (max-width: 900px) {
+  .resultsThreeColumns {
+    grid-template-columns: 1fr !important;
+  }
 }
