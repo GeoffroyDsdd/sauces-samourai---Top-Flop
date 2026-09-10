@@ -477,4 +477,124 @@ tr:nth-child(even) td {
   .popup {
     padding: 26px 20px;
   }
+  /* Résultats en trois colonnes */
+
+.resultsThreeColumns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.resultColumn {
+  min-width: 0;
+  margin: 0;
+  padding: 24px;
+}
+
+.resultColumn h3 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 1.45rem;
+  text-align: center;
+}
+
+.resultColumnTop {
+  border-top-color: var(--samourai-gold);
+}
+
+.resultColumnFlop {
+  border-top-color: var(--samourai-red);
+}
+
+.resultColumnGhost {
+  border-top-color: #777777;
+}
+
+.rankingRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  padding: 14px;
+  background: var(--samourai-white);
+  border: 1px solid rgba(120, 11, 32, 0.12);
+  border-radius: 14px;
+}
+
+.rankingRow:last-child {
+  margin-bottom: 0;
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: var(--samourai-light);
+  border-radius: 50%;
+}
+
+.rankingContent {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 5px;
+}
+
+.rankingContent strong {
+  color: var(--samourai-dark-red);
+  font-size: 1.05rem;
+}
+
+.rankingContent small {
+  color: rgba(32, 24, 26, 0.7);
+  line-height: 1.45;
+}
+
+.podiumTop {
+  background: linear-gradient(
+    135deg,
+    rgba(228, 180, 76, 0.18),
+    #ffffff
+  );
+}
+
+.podiumFlop {
+  background: linear-gradient(
+    135deg,
+    rgba(200, 16, 46, 0.11),
+    #ffffff
+  );
+}
+
+.ghostRow {
+  background: linear-gradient(
+    135deg,
+    rgba(120, 120, 120, 0.1),
+    #ffffff
+  );
+}
+
+.gate {
+  padding: 30px;
+  color: var(--samourai-dark-red);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-top: 6px solid var(--samourai-red);
+  border-radius: 24px;
+  box-shadow: 0 17px 40px rgba(120, 11, 32, 0.09);
+}
+
+@media (max-width: 1050px) {
+  .resultsThreeColumns {
+    grid-template-columns: 1fr;
+  }
 }
