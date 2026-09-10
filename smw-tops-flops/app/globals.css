@@ -809,4 +809,57 @@ tr:nth-child(even) td {
   .resultsThreeColumns {
     grid-template-columns: 1fr !important;
   }
+  /* En-tête mobile sans chevauchement */
+
+@media (max-width: 750px) {
+  header {
+    min-height: auto !important;
+    padding: 18px !important;
+    overflow: visible !important;
+  }
+
+  header .brand {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  header .team-logos {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    align-self: flex-end !important;
+    order: 1 !important;
+    width: 100% !important;
+    margin: 0 0 18px !important;
+    gap: 12px !important;
+  }
+
+  header .brand-text {
+    order: 2 !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  header .team-logos img {
+    width: 76px !important;
+    height: 76px !important;
+    object-fit: contain !important;
+  }
+
+  header .brand h1,
+  header h1 {
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 1.8rem !important;
+    line-height: 1.15 !important;
+  }
+
+  header .brand p,
+  header p {
+    margin-top: 8px !important;
+    font-size: 1rem !important;
+  }
 }
