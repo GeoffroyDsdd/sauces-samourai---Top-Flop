@@ -293,4 +293,47 @@ tr:nth-child(even) td {
     padding: 20px;
     border-radius: 18px;
   }
+  .brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.team-logos {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 14px;
+}
+
+.team-logos img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 7px;
+  background: white;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 10px 26px rgba(32, 24, 26, 0.22);
+}
+
+@media (max-width: 750px) {
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .team-logos {
+    margin-top: 12px;
+  }
+
+  .team-logos img {
+    width: 72px;
+    height: 72px;
+  }
 }

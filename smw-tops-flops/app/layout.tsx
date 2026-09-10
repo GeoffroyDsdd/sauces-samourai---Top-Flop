@@ -1,6 +1,48 @@
-import "./globals.css";import Link from "next/link";import Image from "next/image";
-export const metadata = {
-title: "Sauces Samourai Tops & Flops",
-description: "Les votes de match des Sauces Samourai, White Star Dames 6.",
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Sauces Samourai Tops & Flops",
+  description:
+    "Application de vote des Sauces Samourai, White Star Dames 6.",
 };
-export default function Layout({children}:{children:React.ReactNode}){return <html lang="fr"><body><div className="wrap"><header className="header"><div className="brand"><h1>Sauces Samourai Tops & Flops</h1><p>Les votes du match, simplement.</p></div><Image className="logo" src="/Sauces Samourai-logo.png" alt="Logo Sauces Samourai Hockey Club" width={120} height={120} priority/></header><nav className="nav"><Link href="/">Match & vote</Link><Link href="/justifications">Justifications</Link><Link href="/resultats">Résultats</Link><Link href="/admin">Admin</Link></nav>{children}</div></body></html>}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="fr">
+      <body>
+        <div className="shell">
+          <header>
+            <div className="brand">
+              <div>
+                <h1>Sauces Samourai Tops & Flops</h1>
+                <p>White Star Dames 6</p>
+              </div>
+
+              <div className="team-logos">
+                /white-star.png
+
+                /sauces-samourai.png
+              </div>
+            </div>
+          </header>
+
+          <nav aria-label="Navigation principale">
+            /Match & vote</Link>
+            /justificationsJustifications</Link>
+            /resultatsRésultats</Link>
+            /adminAdmin</Link>
+          </nav>
+
+          <main>{children}</main>
+        </div>
+      </body>
+    </html>
+  );
+}
