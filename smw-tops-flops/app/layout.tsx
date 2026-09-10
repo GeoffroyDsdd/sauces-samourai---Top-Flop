@@ -20,7 +20,7 @@ export default function RootLayout({
         <div className="shell">
           <header>
             <div className="brand">
-              <div>
+              <div className="brand-text">
                 <h1>Sauces Samourai Tops & Flops</h1>
                 <p>White Star Dames 6</p>
               </div>
@@ -34,7 +34,7 @@ export default function RootLayout({
           </header>
 
           <nav aria-label="Navigation principale">
-            /Match & vote</Link>
+            /Match &amp; vote</Link>
             /justificationsJustifications</Link>
             /resultatsRésultats</Link>
             /adminAdmin</Link>
