@@ -1,0 +1,11 @@
+from pathlib import Path
+p=Path("app/page.tsx")
+s=p.read_text(encoding="utf-8")
+s=s.replace('async function prepare(){\n  const{error}=await supabase.rpc("create_scheduled_match",{p_label:label,p_played_at:date||null});', 'async function prepare(){\n  if(!date){setMsg("Choisissez une date.");return;}\n  const{error}=await supabase.rpc("create_scheduled_match",{p_label:label,p_played_at:date});')
+s=s.replace('<div className="grid"><input className="input" value={label} onChange={e=>setLabel(e.target.value)} placeholder="Écrivez le nom que vous voulez"/><input className="input" type="date" value={date} onChange={e=>setDate(e.target.value)}/></div>', '<div className="grid"><div><label>Nom du match</label><input className="input" value={label} onChange={e=>setLabel(e.target.value)} placeholder="Ex. SMW - Rasante"/></div><div><label>Date</label><input className="input" type="date" value={date} onChange={e=>setDate(e.target.value)}/></div></div>')
+s=s.replace('<label>Top 1 (+3)</label>', '<label>Top 1 (+3 pts)</label>')
+s=s.replace('<label>Top 2 (+2)</label>', '<label>Top 2 (+2 pts)</label>')
+s=s.replace('<label>Top 3 (+1)</label>', '<label>Top 3 (+1 pt)</label>')
+s=s.replace('<label>Flop (-1, séparé des Tops)</label>', '<label>Flop (-1 pt)</label>')
+p.write_text(s,encoding="utf-8")
+print("V4 applied to app/page.tsx")
