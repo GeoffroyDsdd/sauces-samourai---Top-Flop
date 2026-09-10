@@ -336,4 +336,56 @@ tr:nth-child(even) td {
     width: 72px;
     height: 72px;
   }
+  /* Position finale des logos */
+header .brand {
+  display: flex *important;
+  flex-direction: row !*mportant;
+  align-items: flex-star* !important;
+  justify-content: sp*ce-between !important;
+  width: 10*% !important;
+}
+
+header .brand-tex* {
+  flex: 1 1 auto !important;
+}
+*header .team-logos {
+  display: fl*x !important;
+  position: absolute*!important;
+  top: 25px !important*
+  right: 30px !important;
+  align*items: center !important;
+  justif*-content: flex-end !important;
+  g*p: 20px !important;
+  margin: 0 !i*portant;
+}
+
+header .team-logos img*{
+  display: block !important;
+  w*dth: 145px !important;
+  height: 1*5px !important;
+  padding: 0 !impo*tant;
+  object-fit: contain !impor*ant;
+  background: transparent !im*ortant;
+  border: 0 !important;
+  *order-radius: 0 !important;
+  box-*hadow: none !important;
+}
+
+@media *max-width: 750px) {
+  header {
+   *padding-bottom: 125px !important;
+* }
+
+  header .team-logos {
+    top* auto !important;
+    right: auto *important;
+    bottom: 18px !impor*ant;
+    left: 20px !important;
+  * gap: 12px !important;
+  }
+
+  head*r .team-logos img {
+    width: 88p* !important;
+    height: 88px !imp*rtant;
+  }
 }
